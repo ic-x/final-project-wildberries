@@ -2,17 +2,18 @@
 //  SkyBargainApp.swift
 //  SkyBargain
 //
-//  Created by Louise Hogan on 8/14/24.
-//
 
 import SwiftUI
 import SwiftData
 
 @main
 struct SkyBargainApp: App {
+    
+    @StateObject var tripFindService: TripFindService = .init()
+    
     var sharedModelContainer: ModelContainer = {
         let schema = Schema([
-            Item.self,
+            TripSwiftDataModel.self,
         ])
         let modelConfiguration = ModelConfiguration(schema: schema, isStoredInMemoryOnly: false)
 
@@ -25,7 +26,8 @@ struct SkyBargainApp: App {
 
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            TripsListView(tripFindService: tripFindService)
+               
         }
         .modelContainer(sharedModelContainer)
     }

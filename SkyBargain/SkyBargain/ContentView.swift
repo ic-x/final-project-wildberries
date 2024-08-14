@@ -2,15 +2,13 @@
 //  ContentView.swift
 //  SkyBargain
 //
-//  Created by Louise Hogan on 8/14/24.
-//
 
 import SwiftUI
 import SwiftData
 
 struct ContentView: View {
     @Environment(\.modelContext) private var modelContext
-    @Query private var items: [Item]
+    @Query private var items: [TripSwiftDataModel]
 
     var body: some View {
         NavigationSplitView {
@@ -41,7 +39,7 @@ struct ContentView: View {
 
     private func addItem() {
         withAnimation {
-            let newItem = Item(timestamp: Date())
+            let newItem = TripSwiftDataModel(timestamp: Date(), liked: true)
             modelContext.insert(newItem)
         }
     }
@@ -57,5 +55,5 @@ struct ContentView: View {
 
 #Preview {
     ContentView()
-        .modelContainer(for: Item.self, inMemory: true)
+        .modelContainer(for: TripSwiftDataModel.self, inMemory: true)
 }

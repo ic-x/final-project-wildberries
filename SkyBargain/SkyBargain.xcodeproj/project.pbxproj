@@ -7,18 +7,34 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7A3F07962C6CE96C00070204 /* TripDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A3F07952C6CE96C00070204 /* TripDetailView.swift */; };
+		7A3F07982C6CE9EC00070204 /* TripFetchModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A3F07972C6CE9EC00070204 /* TripFetchModel.swift */; };
+		7A3F079A2C6CEA2000070204 /* TripFindService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A3F07992C6CEA2000070204 /* TripFindService.swift */; };
+		7A3F079C2C6CEA5200070204 /* TripsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A3F079B2C6CEA5200070204 /* TripsListView.swift */; };
+		7A3F079E2C6CEA9800070204 /* TripCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A3F079D2C6CEA9800070204 /* TripCellView.swift */; };
+		7A3F07A02C6CEAB800070204 /* TripSwiftDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A3F079F2C6CEAB800070204 /* TripSwiftDataModel.swift */; };
+		7A3F07A22C6CEAE200070204 /* Date+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A3F07A12C6CEAE200070204 /* Date+.swift */; };
+		7A3F07A42C6CEB0000070204 /* TripListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A3F07A32C6CEB0000070204 /* TripListViewModel.swift */; };
+		7A3F07A62C6CEB1A00070204 /* String+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A3F07A52C6CEB1A00070204 /* String+.swift */; };
 		7AF4DB832C6CE4C9000DC829 /* SkyBargainApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AF4DB822C6CE4C9000DC829 /* SkyBargainApp.swift */; };
 		7AF4DB852C6CE4C9000DC829 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AF4DB842C6CE4C9000DC829 /* ContentView.swift */; };
-		7AF4DB872C6CE4C9000DC829 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AF4DB862C6CE4C9000DC829 /* Item.swift */; };
 		7AF4DB892C6CE4CA000DC829 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7AF4DB882C6CE4CA000DC829 /* Assets.xcassets */; };
 		7AF4DB8C2C6CE4CA000DC829 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7AF4DB8B2C6CE4CA000DC829 /* Preview Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7A3F07952C6CE96C00070204 /* TripDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripDetailView.swift; sourceTree = "<group>"; };
+		7A3F07972C6CE9EC00070204 /* TripFetchModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripFetchModel.swift; sourceTree = "<group>"; };
+		7A3F07992C6CEA2000070204 /* TripFindService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripFindService.swift; sourceTree = "<group>"; };
+		7A3F079B2C6CEA5200070204 /* TripsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripsListView.swift; sourceTree = "<group>"; };
+		7A3F079D2C6CEA9800070204 /* TripCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripCellView.swift; sourceTree = "<group>"; };
+		7A3F079F2C6CEAB800070204 /* TripSwiftDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripSwiftDataModel.swift; sourceTree = "<group>"; };
+		7A3F07A12C6CEAE200070204 /* Date+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+.swift"; sourceTree = "<group>"; };
+		7A3F07A32C6CEB0000070204 /* TripListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripListViewModel.swift; sourceTree = "<group>"; };
+		7A3F07A52C6CEB1A00070204 /* String+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+.swift"; sourceTree = "<group>"; };
 		7AF4DB7F2C6CE4C9000DC829 /* SkyBargain.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SkyBargain.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7AF4DB822C6CE4C9000DC829 /* SkyBargainApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkyBargainApp.swift; sourceTree = "<group>"; };
 		7AF4DB842C6CE4C9000DC829 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		7AF4DB862C6CE4C9000DC829 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		7AF4DB882C6CE4CA000DC829 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7AF4DB8B2C6CE4CA000DC829 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -55,9 +71,17 @@
 			children = (
 				7AF4DB822C6CE4C9000DC829 /* SkyBargainApp.swift */,
 				7AF4DB842C6CE4C9000DC829 /* ContentView.swift */,
-				7AF4DB862C6CE4C9000DC829 /* Item.swift */,
 				7AF4DB882C6CE4CA000DC829 /* Assets.xcassets */,
 				7AF4DB8A2C6CE4CA000DC829 /* Preview Content */,
+				7A3F07952C6CE96C00070204 /* TripDetailView.swift */,
+				7A3F07972C6CE9EC00070204 /* TripFetchModel.swift */,
+				7A3F07992C6CEA2000070204 /* TripFindService.swift */,
+				7A3F079B2C6CEA5200070204 /* TripsListView.swift */,
+				7A3F079D2C6CEA9800070204 /* TripCellView.swift */,
+				7A3F079F2C6CEAB800070204 /* TripSwiftDataModel.swift */,
+				7A3F07A12C6CEAE200070204 /* Date+.swift */,
+				7A3F07A32C6CEB0000070204 /* TripListViewModel.swift */,
+				7A3F07A52C6CEB1A00070204 /* String+.swift */,
 			);
 			path = SkyBargain;
 			sourceTree = "<group>";
@@ -140,9 +164,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7A3F07A22C6CEAE200070204 /* Date+.swift in Sources */,
+				7A3F07962C6CE96C00070204 /* TripDetailView.swift in Sources */,
+				7A3F079E2C6CEA9800070204 /* TripCellView.swift in Sources */,
+				7A3F07A02C6CEAB800070204 /* TripSwiftDataModel.swift in Sources */,
+				7A3F079A2C6CEA2000070204 /* TripFindService.swift in Sources */,
+				7A3F07A42C6CEB0000070204 /* TripListViewModel.swift in Sources */,
 				7AF4DB852C6CE4C9000DC829 /* ContentView.swift in Sources */,
-				7AF4DB872C6CE4C9000DC829 /* Item.swift in Sources */,
+				7A3F07A62C6CEB1A00070204 /* String+.swift in Sources */,
+				7A3F07982C6CE9EC00070204 /* TripFetchModel.swift in Sources */,
 				7AF4DB832C6CE4C9000DC829 /* SkyBargainApp.swift in Sources */,
+				7A3F079C2C6CEA5200070204 /* TripsListView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
