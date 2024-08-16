@@ -7,18 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		62E8ED6C2C6F508900894EDF /* FlightsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62E8ED6B2C6F508900894EDF /* FlightsListView.swift */; };
+		62E8ED6E2C6F517700894EDF /* FlightsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62E8ED6D2C6F517700894EDF /* FlightsModel.swift */; };
+		62E8ED702C6F51D300894EDF /* FlightsFindService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62E8ED6F2C6F51D300894EDF /* FlightsFindService.swift */; };
 		7AF4DB832C6CE4C9000DC829 /* SkyBargainApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AF4DB822C6CE4C9000DC829 /* SkyBargainApp.swift */; };
-		7AF4DB852C6CE4C9000DC829 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AF4DB842C6CE4C9000DC829 /* ContentView.swift */; };
-		7AF4DB872C6CE4C9000DC829 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AF4DB862C6CE4C9000DC829 /* Item.swift */; };
 		7AF4DB892C6CE4CA000DC829 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7AF4DB882C6CE4CA000DC829 /* Assets.xcassets */; };
 		7AF4DB8C2C6CE4CA000DC829 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7AF4DB8B2C6CE4CA000DC829 /* Preview Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		62E8ED6B2C6F508900894EDF /* FlightsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightsListView.swift; sourceTree = "<group>"; };
+		62E8ED6D2C6F517700894EDF /* FlightsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightsModel.swift; sourceTree = "<group>"; };
+		62E8ED6F2C6F51D300894EDF /* FlightsFindService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightsFindService.swift; sourceTree = "<group>"; };
 		7AF4DB7F2C6CE4C9000DC829 /* SkyBargain.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SkyBargain.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7AF4DB822C6CE4C9000DC829 /* SkyBargainApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkyBargainApp.swift; sourceTree = "<group>"; };
-		7AF4DB842C6CE4C9000DC829 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		7AF4DB862C6CE4C9000DC829 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		7AF4DB882C6CE4CA000DC829 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7AF4DB8B2C6CE4CA000DC829 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -54,10 +56,11 @@
 			isa = PBXGroup;
 			children = (
 				7AF4DB822C6CE4C9000DC829 /* SkyBargainApp.swift */,
-				7AF4DB842C6CE4C9000DC829 /* ContentView.swift */,
-				7AF4DB862C6CE4C9000DC829 /* Item.swift */,
+				62E8ED6B2C6F508900894EDF /* FlightsListView.swift */,
+				62E8ED6D2C6F517700894EDF /* FlightsModel.swift */,
 				7AF4DB882C6CE4CA000DC829 /* Assets.xcassets */,
 				7AF4DB8A2C6CE4CA000DC829 /* Preview Content */,
+				62E8ED6F2C6F51D300894EDF /* FlightsFindService.swift */,
 			);
 			path = SkyBargain;
 			sourceTree = "<group>";
@@ -140,8 +143,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7AF4DB852C6CE4C9000DC829 /* ContentView.swift in Sources */,
-				7AF4DB872C6CE4C9000DC829 /* Item.swift in Sources */,
+				62E8ED6C2C6F508900894EDF /* FlightsListView.swift in Sources */,
+				62E8ED6E2C6F517700894EDF /* FlightsModel.swift in Sources */,
+				62E8ED702C6F51D300894EDF /* FlightsFindService.swift in Sources */,
 				7AF4DB832C6CE4C9000DC829 /* SkyBargainApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -283,6 +287,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -311,6 +316,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
