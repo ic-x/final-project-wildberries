@@ -1,5 +1,5 @@
 //
-//  TripFetchModel.swift
+//  FlightshModel.swift
 //  SkyBargain
 //
 

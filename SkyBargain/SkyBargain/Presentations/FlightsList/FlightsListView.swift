@@ -1,14 +1,14 @@
 //
-//  TripsListView.swift
+//  FlightsListView.swift
 //  SkyBargain
 //
 
 import SwiftUI
 
-struct TripsListView: View {
+struct FlightsListView: View {
     
-    init(tripFindService: TripFindService) {
-        self.tripListViewModel = TripListViewModel(tripFindService: tripFindService)
+    init(flightsFindService: FlightsFindService) {
+        self.flightsFindService = FlightsListViewModel(flightsFindService: flightsFindService)
     }
     
     var body: some View {
@@ -16,11 +16,11 @@ struct TripsListView: View {
             ZStack {
                 ScrollView(showsIndicators: false) {
                     LazyVStack(alignment: .leading, spacing: 16, content: {
-                        ForEach(tripListViewModel.cheapFlights?.flights ?? [], id: \.self) { flight in
-                            NavigationLink(destination: TripDetailView(flight: flight, like: {
+                        ForEach(flightsFindService.cheapFlights?.flights ?? [], id: \.self) { flight in
+                            NavigationLink(destination: FlightDetailView(flight: flight, like: {
                                 print("")
                             })) {
-                                TripCell(flight: flight, like: {
+                                FlightCellView(flight: flight, like: {
                                     print("")
                                 })
                             }
@@ -32,7 +32,7 @@ struct TripsListView: View {
                 }
                 .padding(16)
                 .refreshable {
-                    tripListViewModel.refresh()
+                    flightsFindService.refresh()
                 }
                 
                 //Loading view
@@ -43,16 +43,11 @@ struct TripsListView: View {
                         .foregroundColor(Color.white.opacity(0.8))
                     ProgressView()
                 }
-                .opacity(tripListViewModel.isLoading ? 1.0 : 0)
+                .opacity(flightsFindService.isLoading ? 1.0 : 0)
             }
         }
-       
+        
     }
     
-    @ObservedObject var tripListViewModel: TripListViewModel
-    @Environment(\.modelContext) private var modelContext
+    @ObservedObject var flightsFindService: FlightsListViewModel
 }
-
-//#Preview {
-//    TripsListView()
-//}
