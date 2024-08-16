@@ -1,17 +1,17 @@
 //
-//  TripCellView.swift
+//  FlightCellView.swift
 //  SkyBargain
 //
 
 import SwiftUI
 
-struct TripCell: View {
+struct FlightCellView: View {
     
     init(flight: Flight, like: @escaping () -> Void) {
         self.flight = flight
         self.like = like
     }
-
+    
     var body: some View {
         
         HStack {
@@ -24,21 +24,19 @@ struct TripCell: View {
             }
             
             VStack(alignment: .leading, spacing: 16) {
-                
                 Text(flight.startCity ?? "-")
-                    Text(flight.endCity ?? "-")
+                Text(flight.endCity ?? "-")
                 Text(flight.startDate?.dateFromStringConverter ?? "-")
                 Text(flight.endDate?.dateFromStringConverter ?? "-")
                 Text(String(flight.price ?? 0) + "₽")
-                
-
             }
+            
             Spacer()
             
             Button {
                 like()
             } label: {
-                Image(systemName: /*(tripListViewModel.tripModel?.liked ?? false) ? "heart.fill":*/ "heart")
+                Image(systemName: "heart")
                     .font(.title)
                     .foregroundStyle(Color.purple)
             }
@@ -48,11 +46,3 @@ struct TripCell: View {
     private var like: () -> Void
     @State private var flight: Flight
 }
-
-//#Preview {
-//    TripCell(tripListViewModel: TripListViewModel())
-//}
-//
-//#Preview {
-//    TripCell(tripListViewModel: TripListViewModel())
-//}
