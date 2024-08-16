@@ -40,7 +40,7 @@ struct FlightDetailView: View {
             Button {
                 like()
             } label: {
-                Image(systemName: /*(tripListViewModel.tripModel?.liked ?? false) ? "heart.fill":*/ "heart")
+                Image(systemName: "heart")
                     .font(.title)
                     .foregroundStyle(Color.purple)
             }
@@ -51,7 +51,3 @@ struct FlightDetailView: View {
     private var like: () -> Void
     @State private var flight: Flight
 }
-
-//#Preview {
-//    TripDetailView()
-//}

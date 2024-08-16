@@ -10,7 +10,7 @@ import SwiftUI
 struct FlightsListView: View {
     
     init(flightsFindService: FlightsFindService) {
-        self.tripListViewModel = TripListViewModel(flightsFindService: flightsFindService)
+        self.flightsListViewModel = FlightsListViewModel(flightsFindService: flightsFindService)
     }
     
     var body: some View {
@@ -18,7 +18,7 @@ struct FlightsListView: View {
             ZStack {
                 ScrollView(showsIndicators: false) {
                     LazyVStack(alignment: .leading, spacing: 16, content: {
-                        ForEach(tripListViewModel.cheapFlights?.flights ?? [], id: \.self) { flight in
+                        ForEach(flightsListViewModel.cheapFlights?.flights ?? [], id: \.self) { flight in
                             NavigationLink(destination: FlightDetailView(flight: flight, like: {
                                 print("")
                             })) {
@@ -34,7 +34,7 @@ struct FlightsListView: View {
                 }
                 .padding(16)
                 .refreshable {
-                    tripListViewModel.refresh()
+                    flightsListViewModel.refresh()
                 }
                 
                 //Loading view
@@ -45,15 +45,15 @@ struct FlightsListView: View {
                         .foregroundColor(Color.white.opacity(0.8))
                     ProgressView()
                 }
-                .opacity(tripListViewModel.isLoading ? 1.0 : 0)
+                .opacity(flightsListViewModel.isLoading ? 1.0 : 0)
             }
         }
        
     }
     
-    @ObservedObject var tripListViewModel: TripListViewModel
+    @ObservedObject var flightsListViewModel: FlightsListViewModel
 }
 
 //#Preview {
-//    TripsListView()
+//    FlightsListView()
 //}

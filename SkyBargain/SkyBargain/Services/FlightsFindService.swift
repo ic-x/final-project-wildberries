@@ -47,7 +47,7 @@ final class FlightsFindService: ObservableObject {
         debugPrint("cheapFlights are: ", cheapFlights.value as Any)//delete
     }
     
-    func getTrips() {
+    func getFlights() {
         Task {
             do {
                 try await fetchCheapFlights()

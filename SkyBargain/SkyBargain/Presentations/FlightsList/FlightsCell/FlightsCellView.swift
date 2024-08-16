@@ -40,7 +40,7 @@ struct FlightsCellView: View {
             Button {
                 like()
             } label: {
-                Image(systemName: /*(tripListViewModel.tripModel?.liked ?? false) ? "heart.fill":*/ "heart")
+                Image(systemName: "heart")
                     .font(.title)
                     .foregroundStyle(Color.purple)
             }
@@ -50,11 +50,3 @@ struct FlightsCellView: View {
     private var like: () -> Void
     @State private var flight: Flight
 }
-
-//#Preview {
-//    TripCell(tripListViewModel: TripListViewModel())
-//}
-//
-//#Preview {
-//    TripCell(tripListViewModel: TripListViewModel())
-//}

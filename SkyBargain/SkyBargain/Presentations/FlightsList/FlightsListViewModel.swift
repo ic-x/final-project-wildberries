@@ -8,22 +8,22 @@
 import SwiftUI
 import Combine
 
-final class TripListViewModel: ObservableObject {
+final class FlightsListViewModel: ObservableObject {
     @Published var isLoading: Bool = false
    
     init(flightsFindService: FlightsFindService) {
         self.flightsFindService = flightsFindService
         subscribeToGlights()
-        flightsFindService.getTrips()
+        flightsFindService.getFlights()
     }
     
     
     func refresh() {
-        flightsFindService.getTrips()
+        flightsFindService.getFlights()
     }
     
-    func putLikeOnTrip(tripId: Int) {
-        print("Liked trip by ID: ", tripId)//debug
+    func putLikeOnFlight(flightId: Int) {
+        print("Liked flight by ID: ", flightId)//debug
     }
     
     func subscribeToGlights() {
