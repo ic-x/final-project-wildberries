@@ -8,7 +8,7 @@
 import Foundation
 import Combine
 
-final class TripFindService: ObservableObject {
+final class FlightsFindService: ObservableObject {
     
     var cheapFlights: CurrentValueSubject<Flights?, Never> = .init(nil)
     var isLoading: CurrentValueSubject<Bool, Never> = .init(false)
@@ -47,7 +47,7 @@ final class TripFindService: ObservableObject {
         }
     }
     
-    func getTrips() {
+    func getFlights() {
         Task {
             do {
                 try await fetchCheapFlights()
