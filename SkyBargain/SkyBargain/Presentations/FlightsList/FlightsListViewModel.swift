@@ -7,11 +7,17 @@ import SwiftUI
 import Combine
 
 final class FlightsListViewModel: ObservableObject {
+    
     @Published var isLoading: Bool = false
+    @Published var cheapFlights: Flights?
+    @Published private var flightsFindService: FlightsFindService
+    @Published private var saveFlightsService: SaveFlightsService
     
+    var cancellableSet: Set<AnyCancellable> = []
     
-    init(flightsFindService: FlightsFindService) {
+    init(flightsFindService: FlightsFindService, saveFlightsService: SaveFlightsService) {
         self.flightsFindService = flightsFindService
+        self.saveFlightsService = saveFlightsService
         subscribeToGlights()
         flightsFindService.getFlights()
     }
@@ -20,9 +26,8 @@ final class FlightsListViewModel: ObservableObject {
         flightsFindService.getFlights()
     }
     
-    func putLikeOnFlight(flightId: Int) {
-        
-        print("Liked flight by ID: ", flightId)//debug
+    func putLikeOnFlight(flightId: String) {
+        saveFlightsService.saveID(flightId)
     }
     
     func subscribeToGlights() {
@@ -35,7 +40,5 @@ final class FlightsListViewModel: ObservableObject {
             .store(in: &cancellableSet)
     }
     
-    var cancellableSet: Set<AnyCancellable> = []
-    @Published var cheapFlights: Flights? = nil
-    @Published private var flightsFindService: FlightsFindService
+ 
 }

@@ -14,8 +14,8 @@ struct SkyBargainApp: App {
     
     var body: some Scene {
         WindowGroup {
-//            ContentView()
-            UIModuleExamplesView()
+            ContentView()
+          //  UIModuleExamplesView()
         }
     }
 }

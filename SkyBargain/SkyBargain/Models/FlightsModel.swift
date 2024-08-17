@@ -10,7 +10,7 @@ struct Flights: Codable {
 }
 
 struct Flight: Codable, Hashable {
-    var id = UUID()
+    let id = UUID()
     private enum CodingKeys : String, CodingKey { case startDate,
                                                        endDate,
                                                        startLocationCode,
@@ -23,7 +23,8 @@ struct Flight: Codable, Hashable {
                                                        searchToken,
                                                        imageUrl,
                                                        imageWebpUrl,
-                                                       airlineCode
+                                                       airlineCode,
+                                                       isLiked
     }
     
     let startDate: String?
@@ -39,6 +40,7 @@ struct Flight: Codable, Hashable {
     let imageUrl: String?
     let imageWebpUrl: String?
     let airlineCode: String?
+    let isLiked: Bool
 }
 
 struct Seat: Codable, Hashable {

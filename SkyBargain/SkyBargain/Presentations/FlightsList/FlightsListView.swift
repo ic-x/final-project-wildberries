@@ -7,32 +7,34 @@ import SwiftUI
 
 struct FlightsListView: View {
     
-    init(flightsFindService: FlightsFindService) {
-        self.flightsFindService = FlightsListViewModel(flightsFindService: flightsFindService)
+    init(flightsFindService: FlightsFindService, saveFlightsService: SaveFlightsService) {
+        self._viewModel = StateObject(wrappedValue: FlightsListViewModel(flightsFindService: flightsFindService, saveFlightsService: saveFlightsService))
     }
     
     var body: some View {
         NavigationStack {
             ZStack {
                 ScrollView(showsIndicators: false) {
-                    LazyVStack(alignment: .leading, spacing: 16, content: {
-                        ForEach(flightsFindService.cheapFlights?.flights ?? [], id: \.self) { flight in
-                            NavigationLink(destination: FlightDetailView(flight: flight, like: {
-                                print("")
-                            })) {
-                                FlightCellView(flight: flight, like: {
-                                    print("")
-                                })
+                    if let flights = viewModel.cheapFlights?.flights {
+                        LazyVStack(alignment: .leading, spacing: 16, content: {
+                            ForEach(flights, id: \.self) { flight in
+                                NavigationLink(destination: FlightDetailView(flight: flight, like: {
+                                    viewModel.putLikeOnFlight(flightId: flight.id.uuidString)
+                                })) {
+                                    FlightCellView(flight: flight, like: {
+                                        viewModel.putLikeOnFlight(flightId: flight.id.uuidString)
+                                    })
+                                }
+                                .tint(Color.black)
+                                
+                                Divider()
                             }
-                            .tint(Color.black)
-                            
-                            Divider()
-                        }
-                    })
+                        })
+                    }
                 }
                 .padding(16)
                 .refreshable {
-                    flightsFindService.refresh()
+                    viewModel.refresh()
                 }
                 
                 //Loading view
@@ -43,11 +45,11 @@ struct FlightsListView: View {
                         .foregroundColor(Color.white.opacity(0.8))
                     ProgressView()
                 }
-                .opacity(flightsFindService.isLoading ? 1.0 : 0)
+                .opacity(viewModel.isLoading ? 1.0 : 0)
             }
         }
         
     }
     
-    @ObservedObject var flightsFindService: FlightsListViewModel
+    @StateObject private var viewModel: FlightsListViewModel
 }

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		62A76FD32C707C2300035738 /* SaveFlightsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62A76FD22C707C2300035738 /* SaveFlightsService.swift */; };
 		7A3F07962C6CE96C00070204 /* FlightDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A3F07952C6CE96C00070204 /* FlightDetailView.swift */; };
 		7A3F07982C6CE9EC00070204 /* FlightsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A3F07972C6CE9EC00070204 /* FlightsModel.swift */; };
 		7A3F079A2C6CEA2000070204 /* FlightsFindService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A3F07992C6CEA2000070204 /* FlightsFindService.swift */; };
@@ -25,6 +26,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		62A76FD22C707C2300035738 /* SaveFlightsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveFlightsService.swift; sourceTree = "<group>"; };
 		7A3F07952C6CE96C00070204 /* FlightDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightDetailView.swift; sourceTree = "<group>"; };
 		7A3F07972C6CE9EC00070204 /* FlightsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightsModel.swift; sourceTree = "<group>"; };
 		7A3F07992C6CEA2000070204 /* FlightsFindService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightsFindService.swift; sourceTree = "<group>"; };
@@ -77,6 +79,7 @@
 			isa = PBXGroup;
 			children = (
 				7A3F07992C6CEA2000070204 /* FlightsFindService.swift */,
+				62A76FD22C707C2300035738 /* SaveFlightsService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -270,6 +273,7 @@
 				7A3F079A2C6CEA2000070204 /* FlightsFindService.swift in Sources */,
 				7A3F07A42C6CEB0000070204 /* FlightsListViewModel.swift in Sources */,
 				7ACB14A02C7016E400B05F0D /* UIModuleExamplesView.swift in Sources */,
+				62A76FD32C707C2300035738 /* SaveFlightsService.swift in Sources */,
 				7A3F07A62C6CEB1A00070204 /* String+.swift in Sources */,
 				7ACB148E2C7013E800B05F0D /* ContentView.swift in Sources */,
 				7A3F07982C6CE9EC00070204 /* FlightsModel.swift in Sources */,
