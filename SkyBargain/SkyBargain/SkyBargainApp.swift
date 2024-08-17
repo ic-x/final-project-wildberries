@@ -4,15 +4,18 @@
 //
 
 import SwiftUI
+import UI
 
 @main
 struct SkyBargainApp: App {
-
-    @StateObject private var flightsFindService: FlightsFindService = .init()
-  
+    init() {
+        UI.setup()
+    }
+    
     var body: some Scene {
         WindowGroup {
-            FlightsListView(flightsFindService: flightsFindService)
+//            ContentView()
+            UIModuleExamplesView()
         }
     }
 }
