@@ -8,12 +8,12 @@ import SwiftUI
 public struct SearchTextField: View {
     @Binding var text: String
     let placeholder: String
-
+    
     public init(text: Binding<String>, placeholder: String = "Search") {
         self._text = text
         self.placeholder = placeholder
     }
-
+    
     public var body: some View {
         HStack {
             Image(.searchIcon)
@@ -34,4 +34,9 @@ public struct SearchTextField: View {
                 .stroke(Color.inputField.opacity(0.5), lineWidth: 1)
         )
     }
+}
+
+#Preview {
+    SearchTextField(text: .constant(""))
+        .padding()
 }

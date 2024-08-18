@@ -50,8 +50,31 @@ public struct CustomTabView: View {
         
         icon
             .font(.system(size: 20))
-            .foregroundColor(isActive ? .accentColor : .icon)
+            .foregroundColor(isActive ? .brandAccentColor : .icon)
             .bold()
             .transition(.scale)
     }
+}
+
+#Preview {
+    CustomTabView(
+        selection: .constant(0),
+        tabItems: [
+            CustomTabItem(
+                icon: Image(systemName: "list.bullet.circle"),
+                activeIcon: Image(systemName: "list.bullet.circle.fill"),
+                view: AnyView(Text("Home"))
+            ),
+            CustomTabItem(
+                icon: Image(systemName: "star.circle"),
+                activeIcon: Image(systemName: "star.circle.fill"),
+                view: AnyView(Text("Favorites"))
+            ),
+            CustomTabItem(
+                icon: Image(systemName: "person.crop.circle"),
+                activeIcon: Image(systemName: "person.crop.circle.fill"),
+                view: AnyView(Text("Profile"))
+            )
+        ]
+    )
 }

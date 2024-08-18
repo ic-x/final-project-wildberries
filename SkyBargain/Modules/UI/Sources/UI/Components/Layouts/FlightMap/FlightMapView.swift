@@ -81,3 +81,8 @@ public struct FlightMapView: UIViewRepresentable {
         return MKCoordinateRegion(center: center, span: span)
     }
 }
+
+#Preview {
+    FlightMapView()
+        .ignoresSafeArea()
+}

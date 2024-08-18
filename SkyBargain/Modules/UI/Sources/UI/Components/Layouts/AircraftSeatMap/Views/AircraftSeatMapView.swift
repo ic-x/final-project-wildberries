@@ -52,3 +52,7 @@ public struct AircraftSeatMapView: View {
         .padding()
     }
 }
+
+#Preview {
+    AircraftSeatMapView()
+}

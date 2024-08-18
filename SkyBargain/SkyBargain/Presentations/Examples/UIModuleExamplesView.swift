@@ -60,15 +60,14 @@ struct UIModuleExamplesView: View {
             VStack(spacing: 20) {
                 Text("Hello, World!")
                     .font(.largeTitle)
-                    .slideAndScale()
                 
                 PrimaryButton(action: {
                     print("Button Clicked")
                 }) {
                     Text("Click Me")
                 }
-                .slideAndScale(offset: 100)
             }
+            .slideAndScale(offset: 100)
             .padding()
             
             

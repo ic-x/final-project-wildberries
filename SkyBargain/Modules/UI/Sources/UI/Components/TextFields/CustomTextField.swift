@@ -32,3 +32,10 @@ public struct CustomTextField<Label>: View where Label: View {
         }
     }
 }
+
+#Preview {
+    CustomTextField(text: .constant(""), placeholder: "Enter text") {
+        Text("Label")
+    }
+    .padding()
+}
