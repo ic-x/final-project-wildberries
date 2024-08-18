@@ -7,22 +7,36 @@
 
 import Foundation
 
-class SaveFlightsService: ObservableObject {
+final class SaveFlightsService: ObservableObject {
     private let userDefaults = UserDefaults.standard
     private let key = "savedIDs"
     
-    // Сохранение ID
-    func saveID(_ id: String) {
-        var savedIDs = userDefaults.stringArray(forKey: key) ?? []
-        if !savedIDs.contains(id) {
-            savedIDs.append(id)
-            userDefaults.set(savedIDs, forKey: key)
-        }
+    @Published var savedIDs: [String] = []
+    
+    init() {
+        savedIDs = userDefaults.stringArray(forKey: key) ?? []
     }
     
-    // Проверка наличия ID
+    func trySaveID(_ id: String) {
+        guard isIDSaved(id) else {
+            if !savedIDs.contains(id) {
+                savedIDs.append(id)
+                userDefaults.set(savedIDs, forKey: key)
+            }
+            return
+        }
+        deleteByID(id)
+    }
+    
     func isIDSaved(_ id: String) -> Bool {
         let savedIDs = userDefaults.stringArray(forKey: key) ?? []
         return savedIDs.contains(id)
+    }
+    
+    private func deleteByID(_ id: String) {
+        if let index = savedIDs.firstIndex(of: id) {
+            savedIDs.remove(at: index)
+            userDefaults.set(savedIDs, forKey: key)
+        }
     }
 }

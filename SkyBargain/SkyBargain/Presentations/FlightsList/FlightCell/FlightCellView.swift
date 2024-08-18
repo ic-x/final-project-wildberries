@@ -7,9 +7,14 @@ import SwiftUI
 
 struct FlightCellView: View {
     
-    init(flight: Flight, like: @escaping () -> Void) {
+    @State private var flight: Flight
+    @ObservedObject private var saveFlightsService: SaveFlightsService
+    private var like: () -> Void
+    
+    init(flight: Flight, saveFlightsService: SaveFlightsService, like: @escaping () -> Void) {
         self.flight = flight
         self.like = like
+        self.saveFlightsService = saveFlightsService
     }
     
     var body: some View {
@@ -36,13 +41,10 @@ struct FlightCellView: View {
             Button {
                 like()
             } label: {
-                Image(systemName: "heart")
+                Image(systemName: saveFlightsService.isIDSaved(flight.imageWebpUrl ?? "") ? "heart.fill" : "heart")
                     .font(.title)
                     .foregroundStyle(Color.purple)
             }
         }
     }
-    
-    private var like: () -> Void
-    @State private var flight: Flight
 }
