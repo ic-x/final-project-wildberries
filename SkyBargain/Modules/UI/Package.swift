@@ -1,8 +1,9 @@
-// swift-tools-version: 5.10
+// swift-tools-version: 5.7
 import PackageDescription
 
 let package = Package(
     name: "UI",
+    defaultLocalization: "en-US",
     platforms: [
         .iOS(.v16)
     ],
@@ -14,9 +15,6 @@ let package = Package(
     targets: [
         .target(
             name: "UI",
-            resources: [
-                .process("Resources/Fonts"),
-                .process("Resources/Assets.xcassets")
-            ]),
+            resources: [.process("Resources")]),
     ]
 )
