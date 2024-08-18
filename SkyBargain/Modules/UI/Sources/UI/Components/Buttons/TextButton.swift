@@ -27,3 +27,9 @@ public struct TextButton<Label: View>: View {
         .disabled(!isEnabled)
     }
 }
+
+#Preview {
+    TextButton(action: {}) {
+        Text("Text Button")
+    }
+}

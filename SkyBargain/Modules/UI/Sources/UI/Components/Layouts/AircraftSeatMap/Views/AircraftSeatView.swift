@@ -34,3 +34,7 @@ struct AircraftSeatView: View {
         }
     }
 }
+
+#Preview {
+    AircraftSeatView(seat: .constant(AircraftSeat(number: "12A", isAvailable: true, isSelected: false)))
+}

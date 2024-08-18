@@ -20,3 +20,7 @@ struct AircraftLegendItem: View {
         }
     }
 }
+
+#Preview {
+    AircraftLegendItem(color: .blue, description: "Sample Description")
+}

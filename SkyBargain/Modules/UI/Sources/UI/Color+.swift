@@ -9,6 +9,7 @@ extension Color {
     public static let brandBackground = Color("BrandBackground", bundle: .module)
     public static let brandPlaceholder = Color("BrandPlaceholder", bundle: .module)
     public static let brandDisclaimer = Color("BrandDisclaimer", bundle: .module)
+    public static let brandAccentColor = Color("AccentColor", bundle: .module)
     public static let activeBrandDisclaimer = Color("ActiveBrandDisclaimer", bundle: .module)
     
     // Button colors
@@ -29,7 +30,6 @@ extension Color {
     public static let safe = Color("Safe", bundle: .module)
     
     // Special colors
-    public static let accentColor = Color("AccentColor", bundle: .module)
     public static let masking = Color("Masking", bundle: .module)
     public static let disclaimer = Color("Disclaimer", bundle: .module)
     

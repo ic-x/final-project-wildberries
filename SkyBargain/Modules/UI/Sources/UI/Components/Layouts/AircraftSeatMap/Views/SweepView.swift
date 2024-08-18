@@ -34,3 +34,9 @@ struct SweepView: View {
         }
     }
 }
+
+#Preview {
+    SweepView()
+        .background(Color.black)
+        .ignoresSafeArea()
+}

@@ -22,3 +22,8 @@ extension View {
         self.modifier(FadeInAnimation())
     }
 }
+
+#Preview {
+    Text("Hello, World!")
+        .fadeIn()
+}

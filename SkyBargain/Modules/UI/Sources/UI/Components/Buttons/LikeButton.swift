@@ -65,3 +65,7 @@ public struct LikeButton: View {
         }
     }
 }
+
+#Preview {
+    LikeButton(isLiked: .constant(false)) {}
+}

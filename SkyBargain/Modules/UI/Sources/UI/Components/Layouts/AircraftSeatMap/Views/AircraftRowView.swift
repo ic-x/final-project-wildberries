@@ -15,3 +15,7 @@ struct AircraftRowView: View {
         }
     }
 }
+
+#Preview {
+    AircraftRowView(seats: .constant([nil, nil, nil]))
+}

@@ -30,3 +30,9 @@ public struct PrimaryButton<Label: View>: View {
         .disabled(!isEnabled)
     }
 }
+
+#Preview {
+    PrimaryButton(action: {}) {
+        Text("Primary Button")
+    }
+}
