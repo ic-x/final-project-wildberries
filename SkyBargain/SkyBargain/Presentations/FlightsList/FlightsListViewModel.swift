@@ -10,8 +10,9 @@ final class FlightsListViewModel: ObservableObject {
     
     @Published var isLoading: Bool = false
     @Published var cheapFlights: Flights?
+    @Published var saveFlightsService: SaveFlightsService
     @Published private var flightsFindService: FlightsFindService
-    @Published private var saveFlightsService: SaveFlightsService
+   
     
     var cancellableSet: Set<AnyCancellable> = []
     
@@ -27,10 +28,10 @@ final class FlightsListViewModel: ObservableObject {
     }
     
     func putLikeOnFlight(flightId: String) {
-        saveFlightsService.saveID(flightId)
+        saveFlightsService.trySaveID(flightId)
     }
     
-    func subscribeToGlights() {
+   private func subscribeToGlights() {
         flightsFindService.cheapFlights
             .assign(to: \.cheapFlights, on: self)
             .store(in: &cancellableSet)
