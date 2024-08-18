@@ -6,15 +6,17 @@
 import SwiftUI
 
 struct ContentView: View {
-    @StateObject private var flightsFindService: FlightsFindService = .init()
-    @StateObject private var saveFlightsService: SaveFlightsService = .init()
-    
-    var body: some View {
-        FlightsListView(flightsFindService: flightsFindService, saveFlightsService: saveFlightsService)
-        
+
+    init(flightsFindService: FlightsFindService, saveFlightsService: SaveFlightsService) {
+        self._viewModel = StateObject(wrappedValue: .init(flightsFindService: flightsFindService, saveFlightsService: saveFlightsService))
     }
+    var body: some View {
+        FlightsListView(viewModel: viewModel)
+    }
+    
+    @StateObject private var viewModel: FlightsListViewModel
 }
 
 #Preview {
-    ContentView()
+    ContentView(flightsFindService: FlightsFindService(), saveFlightsService: SaveFlightsService())
 }

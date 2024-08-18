@@ -7,22 +7,23 @@ import SwiftUI
 
 struct FlightsListView: View {
     
-    init(flightsFindService: FlightsFindService, saveFlightsService: SaveFlightsService) {
-        self._viewModel = StateObject(wrappedValue: FlightsListViewModel(flightsFindService: flightsFindService, saveFlightsService: saveFlightsService))
+    init(viewModel: FlightsListViewModel) {
+        self.viewModel = viewModel
     }
     
+   
     var body: some View {
         NavigationStack {
             ZStack {
                 ScrollView(showsIndicators: false) {
                     if let flights = viewModel.cheapFlights?.flights {
                         LazyVStack(alignment: .leading, spacing: 16, content: {
-                            ForEach(flights, id: \.self) { flight in
-                                NavigationLink(destination: FlightDetailView(flight: flight, like: {
-                                    viewModel.putLikeOnFlight(flightId: flight.id.uuidString)
+                            ForEach(flights, id: \.imageWebpUrl) { flight in
+                                NavigationLink(destination: FlightDetailView(flight: flight, saveFlightsService: viewModel.saveFlightsService, like: {
+                                    viewModel.putLikeOnFlight(flightId: flight.imageWebpUrl ?? "")
                                 })) {
-                                    FlightCellView(flight: flight, like: {
-                                        viewModel.putLikeOnFlight(flightId: flight.id.uuidString)
+                                    FlightCellView(flight: flight, saveFlightsService: viewModel.saveFlightsService, like: {
+                                        viewModel.putLikeOnFlight(flightId: flight.imageWebpUrl ?? "")
                                     })
                                 }
                                 .tint(Color.black)
@@ -51,5 +52,5 @@ struct FlightsListView: View {
         
     }
     
-    @StateObject private var viewModel: FlightsListViewModel
+    @ObservedObject private var viewModel: FlightsListViewModel
 }
