@@ -24,4 +24,6 @@ extension Font {
     
     // Other fonts
     public static let phone = Font.custom("SFProDisplay-Regular", size: 16)
+    public static let welcomeTitle = Font.custom("SFProDisplay-Regular", size: 40)
+    public static let welcomeText = Font.custom("SFProDisplay-Regular", size: 20)
 }
