@@ -4,6 +4,7 @@
 
 import SwiftUI
 
+@MainActor @preconcurrency
 public struct AircraftSeatMapView: View {
     @State var rows: [[AircraftSeat?]]
     

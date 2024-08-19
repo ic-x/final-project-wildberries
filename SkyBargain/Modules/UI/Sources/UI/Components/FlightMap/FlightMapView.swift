@@ -5,6 +5,7 @@
 import SwiftUI
 import MapKit
 
+@MainActor @preconcurrency
 public struct FlightMapView: UIViewRepresentable {
     public let startCoordinate: CLLocationCoordinate2D
     public let endCoordinate: CLLocationCoordinate2D

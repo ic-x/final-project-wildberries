@@ -1,7 +1,22 @@
 {
   "sourceLanguage" : "en",
   "strings" : {
+    "Favorites" : {
+
+    },
     "Hello, World!" : {
+
+    },
+    "Home" : {
+
+    },
+    "Label" : {
+
+    },
+    "Primary Button" : {
+
+    },
+    "Profile" : {
 
     },
     "Search" : {
@@ -20,6 +35,9 @@
           }
         }
       }
+    },
+    "Text Button" : {
+
     }
   },
   "version" : "1.0"

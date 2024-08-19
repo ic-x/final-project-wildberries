@@ -18,11 +18,7 @@ struct SkyBargainApp: App {
     
     var body: some Scene {
         WindowGroup {
-//            ContentView(flightsFindService: flightsFindService, saveFlightsService: saveFlightsService)
-            UIModuleExamplesView()
-//            UIModuleCustomTabView()
-//            UIModuleAircraftSeatMapView()
-//            UIModuleFlightMapView()
+            ContentView(flightsFindService: flightsFindService, saveFlightsService: saveFlightsService)
         }
     }
 }
