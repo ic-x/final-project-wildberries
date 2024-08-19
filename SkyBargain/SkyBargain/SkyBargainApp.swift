@@ -23,7 +23,8 @@ struct SkyBargainApp: App {
             case false:
                 WelcomeView()
             default:
-                ContentView(flightsFindService: flightsFindService, saveFlightsService: saveFlightsService)
+//                ContentView(flightsFindService: flightsFindService, saveFlightsService: saveFlightsService)
+                MainView()
             }
         }
     }

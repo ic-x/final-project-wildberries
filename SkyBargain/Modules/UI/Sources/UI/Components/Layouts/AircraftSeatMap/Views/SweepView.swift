@@ -28,12 +28,13 @@ public struct SweepView: View {
                     )
             )
             .onAppear {
-                withAnimation(Animation.linear(duration: 1.5).repeatForever(autoreverses: false)) {
+                withAnimation(Animation.linear(duration: 2).repeatForever(autoreverses: false)) {
                     startOffset = 1.0
                     endOffset = 2.0
                 }
             }
         }
+        .allowsHitTesting(false)
     }
 }
 

@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		62A76FD32C707C2300035738 /* SaveFlightsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62A76FD22C707C2300035738 /* SaveFlightsService.swift */; };
+		7A2954C22C72F7C9006A8083 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A2954C12C72F7C9006A8083 /* MainView.swift */; };
+		7A2954C42C72F935006A8083 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A2954C32C72F935006A8083 /* HomeView.swift */; };
+		7A2954C62C72F968006A8083 /* FavoritesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A2954C52C72F968006A8083 /* FavoritesView.swift */; };
+		7A2954C82C72F978006A8083 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A2954C72C72F978006A8083 /* ProfileView.swift */; };
 		7A3F07962C6CE96C00070204 /* FlightDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A3F07952C6CE96C00070204 /* FlightDetailView.swift */; };
 		7A3F07982C6CE9EC00070204 /* FlightsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A3F07972C6CE9EC00070204 /* FlightsModel.swift */; };
 		7A3F079A2C6CEA2000070204 /* FlightsFindService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A3F07992C6CEA2000070204 /* FlightsFindService.swift */; };
@@ -16,7 +20,6 @@
 		7A3F07A42C6CEB0000070204 /* FlightsListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A3F07A32C6CEB0000070204 /* FlightsListViewModel.swift */; };
 		7A3F07A62C6CEB1A00070204 /* String+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A3F07A52C6CEB1A00070204 /* String+.swift */; };
 		7A7B1C092C72E54D00E59827 /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A7B1C082C72E54D00E59827 /* WelcomeView.swift */; };
-		7ABD3E522C717C3C00F4B66C /* UIModuleCustomTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ABD3E512C717C3C00F4B66C /* UIModuleCustomTabView.swift */; };
 		7ACB148E2C7013E800B05F0D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ACB148D2C7013E800B05F0D /* ContentView.swift */; };
 		7ACB149B2C70167200B05F0D /* UI in Resources */ = {isa = PBXBuildFile; fileRef = 7ACB14992C70167200B05F0D /* UI */; };
 		7ACB149E2C70169800B05F0D /* UI in Frameworks */ = {isa = PBXBuildFile; productRef = 7ACB149D2C70169800B05F0D /* UI */; };
@@ -29,6 +32,10 @@
 
 /* Begin PBXFileReference section */
 		62A76FD22C707C2300035738 /* SaveFlightsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveFlightsService.swift; sourceTree = "<group>"; };
+		7A2954C12C72F7C9006A8083 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		7A2954C32C72F935006A8083 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		7A2954C52C72F968006A8083 /* FavoritesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = FavoritesView.swift; path = SkyBargain/Presentations/MainScreens/Favorties/FavoritesView.swift; sourceTree = SOURCE_ROOT; };
+		7A2954C72C72F978006A8083 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ProfileView.swift; path = SkyBargain/Presentations/MainScreens/Profile/ProfileView.swift; sourceTree = SOURCE_ROOT; };
 		7A3F07952C6CE96C00070204 /* FlightDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightDetailView.swift; sourceTree = "<group>"; };
 		7A3F07972C6CE9EC00070204 /* FlightsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightsModel.swift; sourceTree = "<group>"; };
 		7A3F07992C6CEA2000070204 /* FlightsFindService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightsFindService.swift; sourceTree = "<group>"; };
@@ -37,7 +44,6 @@
 		7A3F07A32C6CEB0000070204 /* FlightsListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightsListViewModel.swift; sourceTree = "<group>"; };
 		7A3F07A52C6CEB1A00070204 /* String+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+.swift"; sourceTree = "<group>"; };
 		7A7B1C082C72E54D00E59827 /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
-		7ABD3E512C717C3C00F4B66C /* UIModuleCustomTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIModuleCustomTabView.swift; sourceTree = "<group>"; };
 		7ACB148D2C7013E800B05F0D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		7ACB14992C70167200B05F0D /* UI */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = UI; sourceTree = "<group>"; };
 		7ACB149F2C7016E400B05F0D /* UIModuleExamplesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIModuleExamplesView.swift; sourceTree = "<group>"; };
@@ -96,39 +102,41 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		7A2954C92C72FA49006A8083 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				7A2954C72C72F978006A8083 /* ProfileView.swift */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		7A2954CA2C72FA4F006A8083 /* Favorties */ = {
+			isa = PBXGroup;
+			children = (
+				7A2954C52C72F968006A8083 /* FavoritesView.swift */,
+			);
+			path = Favorties;
+			sourceTree = "<group>";
+		};
 		7A5E35542C72962600C93CA9 /* Home */ = {
 			isa = PBXGroup;
 			children = (
 				7A3F079D2C6CEA9800070204 /* FlightCellView.swift */,
 				7A3F079B2C6CEA5200070204 /* FlightsListView.swift */,
 				7A3F07A32C6CEB0000070204 /* FlightsListViewModel.swift */,
+				7A2954C32C72F935006A8083 /* HomeView.swift */,
 			);
 			path = Home;
-			sourceTree = "<group>";
-		};
-		7A5E35552C72963000C93CA9 /* Favorites */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Favorites;
-			path = ../Favorites;
-			sourceTree = "<group>";
-		};
-		7A5E35562C72964000C93CA9 /* Profile */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Profile;
-			path = ../Profile;
 			sourceTree = "<group>";
 		};
 		7A7B1C062C72E44A00E59827 /* MainScreens */ = {
 			isa = PBXGroup;
 			children = (
 				7A3F07952C6CE96C00070204 /* FlightDetailView.swift */,
-				7A5E35562C72964000C93CA9 /* Profile */,
-				7A5E35552C72963000C93CA9 /* Favorites */,
+				7A2954CA2C72FA4F006A8083 /* Favorties */,
+				7A2954C92C72FA49006A8083 /* Profile */,
 				7A5E35542C72962600C93CA9 /* Home */,
+				7A2954C12C72F7C9006A8083 /* MainView.swift */,
 			);
 			path = MainScreens;
 			sourceTree = "<group>";
@@ -161,7 +169,6 @@
 			isa = PBXGroup;
 			children = (
 				7ACB149F2C7016E400B05F0D /* UIModuleExamplesView.swift */,
-				7ABD3E512C717C3C00F4B66C /* UIModuleCustomTabView.swift */,
 			);
 			path = Examples;
 			sourceTree = "<group>";
@@ -286,15 +293,18 @@
 			files = (
 				7A3F07962C6CE96C00070204 /* FlightDetailView.swift in Sources */,
 				7A3F079E2C6CEA9800070204 /* FlightCellView.swift in Sources */,
-				7ABD3E522C717C3C00F4B66C /* UIModuleCustomTabView.swift in Sources */,
+				7A2954C42C72F935006A8083 /* HomeView.swift in Sources */,
 				7A3F079A2C6CEA2000070204 /* FlightsFindService.swift in Sources */,
 				7A3F07A42C6CEB0000070204 /* FlightsListViewModel.swift in Sources */,
+				7A2954C62C72F968006A8083 /* FavoritesView.swift in Sources */,
 				7ACB14A02C7016E400B05F0D /* UIModuleExamplesView.swift in Sources */,
 				62A76FD32C707C2300035738 /* SaveFlightsService.swift in Sources */,
+				7A2954C82C72F978006A8083 /* ProfileView.swift in Sources */,
 				7A7B1C092C72E54D00E59827 /* WelcomeView.swift in Sources */,
 				7A3F07A62C6CEB1A00070204 /* String+.swift in Sources */,
 				7ACB148E2C7013E800B05F0D /* ContentView.swift in Sources */,
 				7A3F07982C6CE9EC00070204 /* FlightsModel.swift in Sources */,
+				7A2954C22C72F7C9006A8083 /* MainView.swift in Sources */,
 				7AF4DB832C6CE4C9000DC829 /* SkyBargainApp.swift in Sources */,
 				7A3F079C2C6CEA5200070204 /* FlightsListView.swift in Sources */,
 			);

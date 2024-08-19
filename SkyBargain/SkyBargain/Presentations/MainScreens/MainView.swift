@@ -1,12 +1,12 @@
 //
-//  UIModuleCustomTabView.swift
+//  MainView.swift
 //  SkyBargain
 //
 
 import SwiftUI
 import UI
 
-struct UIModuleCustomTabView: View {
+struct MainView: View {
     @State private var selectedTab: Int = 0
     
     var body: some View {
@@ -33,26 +33,6 @@ struct UIModuleCustomTabView: View {
     }
 }
 
-struct HomeView: View {
-    var body: some View {
-        Text("Home View")
-            .frame(maxWidth: .infinity, maxHeight: .infinity)
-            .background(Color.red)
-    }
-}
-
-struct FavoritesView: View {
-    var body: some View {
-        Text("Favorites View")
-            .frame(maxWidth: .infinity, maxHeight: .infinity)
-            .background(Color.green)
-    }
-}
-
-struct ProfileView: View {
-    var body: some View {
-        Text("Profile View")
-            .frame(maxWidth: .infinity, maxHeight: .infinity)
-            .background(Color.blue)
-    }
+#Preview {
+    MainView()
 }
