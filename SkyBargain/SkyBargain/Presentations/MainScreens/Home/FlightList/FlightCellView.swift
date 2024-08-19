@@ -7,7 +7,7 @@ import SwiftUI
 import UI
 
 struct FlightCellView: View {
-    @State private var isLiked: Bool = false
+    @State private var isLiked: Bool
     
     @State private var flight: Flight
     @ObservedObject private var saveFlightsService: SaveFlightsService
@@ -17,6 +17,7 @@ struct FlightCellView: View {
         self.flight = flight
         self.like = like
         self.saveFlightsService = saveFlightsService
+        self.isLiked = saveFlightsService.isIDSaved(flight.imageWebpUrl ?? UUID().uuidString)
     }
     
     var body: some View {

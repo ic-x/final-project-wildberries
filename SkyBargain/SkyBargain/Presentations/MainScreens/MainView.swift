@@ -8,10 +8,12 @@ import UI
 
 struct MainView: View {
     @State private var selectedTab: Int = 0
-    @ObservedObject private var viewModel: FlightsListViewModel
+    @ObservedObject private var flightsListViewModel: FlightsListViewModel
+    @ObservedObject private var favoriteFlightsListViewModel: FavoriteFlightsListViewModel
     
-    init(viewModel: FlightsListViewModel) {
-        self.viewModel = viewModel
+    init(flightsListViewModel: FlightsListViewModel, favoriteFlightsListViewModel: FavoriteFlightsListViewModel) {
+        self.flightsListViewModel = flightsListViewModel
+        self.favoriteFlightsListViewModel = favoriteFlightsListViewModel
     }
     
     var body: some View {
@@ -25,12 +27,12 @@ struct MainView: View {
                     CustomTabItem(
                         icon: Image(systemName: "list.bullet.circle"),
                         activeIcon: Image(systemName: "list.bullet.circle.fill"),
-                        view: AnyView(HomeView(viewModel: viewModel))
+                        view: AnyView(HomeView(viewModel: flightsListViewModel))
                     ),
                     CustomTabItem(
                         icon: Image(systemName: "star.circle"),
                         activeIcon: Image(systemName: "star.circle.fill"),
-                        view: AnyView(FavoritesView())
+                        view: AnyView(FavoritesView(viewModel: favoriteFlightsListViewModel))
                     ),
                     CustomTabItem(
                         icon: Image(systemName: "person.crop.circle"),

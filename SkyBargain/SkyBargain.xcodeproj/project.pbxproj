@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		62A76FD32C707C2300035738 /* SaveFlightsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62A76FD22C707C2300035738 /* SaveFlightsService.swift */; };
+		62CA05A62C7379060070B94E /* FavoriteFlightsListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62CA05A52C7379060070B94E /* FavoriteFlightsListViewModel.swift */; };
 		7A2954C22C72F7C9006A8083 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A2954C12C72F7C9006A8083 /* MainView.swift */; };
 		7A2954C42C72F935006A8083 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A2954C32C72F935006A8083 /* HomeView.swift */; };
 		7A2954C62C72F968006A8083 /* FavoritesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A2954C52C72F968006A8083 /* FavoritesView.swift */; };
@@ -32,6 +33,7 @@
 
 /* Begin PBXFileReference section */
 		62A76FD22C707C2300035738 /* SaveFlightsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveFlightsService.swift; sourceTree = "<group>"; };
+		62CA05A52C7379060070B94E /* FavoriteFlightsListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteFlightsListViewModel.swift; sourceTree = "<group>"; };
 		7A2954C12C72F7C9006A8083 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		7A2954C32C72F935006A8083 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		7A2954C52C72F968006A8083 /* FavoritesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = FavoritesView.swift; path = SkyBargain/Presentations/MainScreens/Favorties/FavoritesView.swift; sourceTree = SOURCE_ROOT; };
@@ -114,6 +116,7 @@
 			isa = PBXGroup;
 			children = (
 				7A2954C52C72F968006A8083 /* FavoritesView.swift */,
+				62CA05A52C7379060070B94E /* FavoriteFlightsListViewModel.swift */,
 			);
 			path = Favorties;
 			sourceTree = "<group>";
@@ -306,6 +309,7 @@
 				7A3F07A42C6CEB0000070204 /* FlightsListViewModel.swift in Sources */,
 				7A2954C62C72F968006A8083 /* FavoritesView.swift in Sources */,
 				7ACB14A02C7016E400B05F0D /* UIModuleExamplesView.swift in Sources */,
+				62CA05A62C7379060070B94E /* FavoriteFlightsListViewModel.swift in Sources */,
 				62A76FD32C707C2300035738 /* SaveFlightsService.swift in Sources */,
 				7A2954C82C72F978006A8083 /* ProfileView.swift in Sources */,
 				7A7B1C092C72E54D00E59827 /* WelcomeView.swift in Sources */,

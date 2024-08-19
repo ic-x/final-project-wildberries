@@ -29,7 +29,6 @@ final class SaveFlightsService: ObservableObject {
     }
     
     func isIDSaved(_ id: String) -> Bool {
-        let savedIDs = userDefaults.stringArray(forKey: key) ?? []
         return savedIDs.contains(id)
     }
     

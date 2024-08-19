@@ -8,18 +8,18 @@ import UI
 
 struct FlightsListView: View {
     
+    @ObservedObject private var viewModel: FlightsListViewModel
+    
     init(viewModel: FlightsListViewModel) {
         self.viewModel = viewModel
     }
-    
    
     var body: some View {
         NavigationStack {
             ZStack {
                 ScrollView(showsIndicators: false) {
-                    if let flights = viewModel.cheapFlights?.flights {
                         LazyVStack(alignment: .leading, spacing: 16, content: {
-                            ForEach(flights, id: \.imageWebpUrl) { flight in
+                            ForEach(viewModel.cheapFlights?.flights ?? [], id: \.imageWebpUrl) { flight in
                                 NavigationLink(destination: FlightDetailView(flight: flight, saveFlightsService: viewModel.saveFlightsService, like: {
                                     viewModel.putLikeOnFlight(flightId: flight.imageWebpUrl ?? "")
                                 })) {
@@ -32,7 +32,6 @@ struct FlightsListView: View {
                                 Divider()
                             }
                         })
-                    }
                 }
                 .padding(16)
                 .refreshable {
@@ -54,5 +53,5 @@ struct FlightsListView: View {
         
     }
     
-    @ObservedObject private var viewModel: FlightsListViewModel
+    
 }

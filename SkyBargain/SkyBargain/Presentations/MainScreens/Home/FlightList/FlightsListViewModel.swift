@@ -12,9 +12,7 @@ final class FlightsListViewModel: ObservableObject {
     @Published var cheapFlights: Flights?
     @Published var saveFlightsService: SaveFlightsService
     @Published private var flightsFindService: FlightsFindService
-   
-    
-    var cancellableSet: Set<AnyCancellable> = []
+    private var cancellableSet: Set<AnyCancellable> = []
     
     init(flightsFindService: FlightsFindService, saveFlightsService: SaveFlightsService) {
         self.flightsFindService = flightsFindService
@@ -31,7 +29,7 @@ final class FlightsListViewModel: ObservableObject {
         saveFlightsService.trySaveID(flightId)
     }
     
-   private func subscribeToGlights() {
+    private func subscribeToGlights() {
         flightsFindService.cheapFlights
             .assign(to: \.cheapFlights, on: self)
             .store(in: &cancellableSet)
@@ -40,6 +38,4 @@ final class FlightsListViewModel: ObservableObject {
             .assign(to: \.isLoading, on: self)
             .store(in: &cancellableSet)
     }
-    
- 
 }
