@@ -13,25 +13,13 @@
     "Custom Font Example" : {
 
     },
-    "Favorites View" : {
-
-    },
     "Hello, World!" : {
-
-    },
-    "Home View" : {
 
     },
     "Name:" : {
 
     },
-    "Profile View" : {
-
-    },
     "safe" : {
-
-    },
-    "SkyBargain" : {
 
     },
     "Город отправления: " : {
@@ -86,6 +74,9 @@
           }
         }
       }
+    },
+    "Это Sky Bargain" : {
+
     }
   },
   "version" : "1.0"

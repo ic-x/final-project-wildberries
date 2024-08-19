@@ -8,8 +8,6 @@ import UI
 
 @main
 struct SkyBargainApp: App {
-    @AppStorage("hasSeenWelcomeScreen") var hasSeenWelcomeScreen: Bool = false
-    
     @StateObject private var flightsFindService: FlightsFindService = .init()
     @StateObject private var saveFlightsService: SaveFlightsService = .init()
     
@@ -19,12 +17,7 @@ struct SkyBargainApp: App {
     
     var body: some Scene {
         WindowGroup {
-            switch hasSeenWelcomeScreen {
-            case false:
-                WelcomeView()
-            default:
-                ContentView(flightsFindService: flightsFindService, saveFlightsService: saveFlightsService)
-            }
+            ContentView(flightsFindService: flightsFindService, saveFlightsService: saveFlightsService)
         }
     }
 }

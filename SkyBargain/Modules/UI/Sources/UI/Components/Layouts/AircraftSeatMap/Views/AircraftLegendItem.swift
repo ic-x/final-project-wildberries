@@ -16,7 +16,6 @@ struct AircraftLegendItem: View {
                 .cornerRadius(4)
             Text(description)
                 .font(.body2)
-                .foregroundStyle(Color.buttonText)
         }
     }
 }
