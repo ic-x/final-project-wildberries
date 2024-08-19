@@ -32,8 +32,9 @@ public struct CustomProgressView: View {
                 .shadow(color: .brandAccentColor, radius: 10)
                 .shadow(color: .brandAccentColor.opacity(0.7), radius: 20)
         }
-        .padding()
+        .padding(40)
         .background(Color.clear)
+        .drawingGroup()
     }
 }
 

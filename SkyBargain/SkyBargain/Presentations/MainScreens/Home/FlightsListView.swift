@@ -41,10 +41,11 @@ struct FlightsListView: View {
                 
                 //Loading view
                 Group {
-                    Rectangle()
-                        .frame(maxWidth: .infinity, maxHeight: .infinity)
-                        .ignoresSafeArea(.all)
-                        .foregroundColor(Color.white.opacity(0.8))
+//                    Rectangle()
+//                        .frame(maxWidth: .infinity, maxHeight: .infinity)
+//                        .ignoresSafeArea(.all)
+//                        .foregroundColor(Color.white.opacity(0.8))
+                    
                     CustomProgressView()
                 }
                 .opacity(viewModel.isLoading ? 1.0 : 0)

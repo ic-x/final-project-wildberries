@@ -15,6 +15,7 @@
 		7A3F079E2C6CEA9800070204 /* FlightCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A3F079D2C6CEA9800070204 /* FlightCellView.swift */; };
 		7A3F07A42C6CEB0000070204 /* FlightsListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A3F07A32C6CEB0000070204 /* FlightsListViewModel.swift */; };
 		7A3F07A62C6CEB1A00070204 /* String+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A3F07A52C6CEB1A00070204 /* String+.swift */; };
+		7A7B1C092C72E54D00E59827 /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A7B1C082C72E54D00E59827 /* WelcomeView.swift */; };
 		7ABD3E522C717C3C00F4B66C /* UIModuleCustomTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ABD3E512C717C3C00F4B66C /* UIModuleCustomTabView.swift */; };
 		7ACB148E2C7013E800B05F0D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ACB148D2C7013E800B05F0D /* ContentView.swift */; };
 		7ACB149B2C70167200B05F0D /* UI in Resources */ = {isa = PBXBuildFile; fileRef = 7ACB14992C70167200B05F0D /* UI */; };
@@ -35,6 +36,7 @@
 		7A3F079D2C6CEA9800070204 /* FlightCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightCellView.swift; sourceTree = "<group>"; };
 		7A3F07A32C6CEB0000070204 /* FlightsListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightsListViewModel.swift; sourceTree = "<group>"; };
 		7A3F07A52C6CEB1A00070204 /* String+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+.swift"; sourceTree = "<group>"; };
+		7A7B1C082C72E54D00E59827 /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
 		7ABD3E512C717C3C00F4B66C /* UIModuleCustomTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIModuleCustomTabView.swift; sourceTree = "<group>"; };
 		7ACB148D2C7013E800B05F0D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		7ACB14992C70167200B05F0D /* UI */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = UI; sourceTree = "<group>"; };
@@ -70,11 +72,9 @@
 		62A76FCC2C6FD3F700035738 /* Presentations */ = {
 			isa = PBXGroup;
 			children = (
-				7A3F07952C6CE96C00070204 /* FlightDetailView.swift */,
-				7A5E35562C72964000C93CA9 /* Profile */,
-				7A5E35552C72963000C93CA9 /* Favorites */,
-				7A5E35542C72962600C93CA9 /* Home */,
+				7A7B1C062C72E44A00E59827 /* MainScreens */,
 				7ACB14A22C70185000B05F0D /* Examples */,
+				7A7B1C082C72E54D00E59827 /* WelcomeView.swift */,
 			);
 			path = Presentations;
 			sourceTree = "<group>";
@@ -110,14 +110,27 @@
 			isa = PBXGroup;
 			children = (
 			);
-			path = Favorites;
+			name = Favorites;
+			path = ../Favorites;
 			sourceTree = "<group>";
 		};
 		7A5E35562C72964000C93CA9 /* Profile */ = {
 			isa = PBXGroup;
 			children = (
 			);
-			path = Profile;
+			name = Profile;
+			path = ../Profile;
+			sourceTree = "<group>";
+		};
+		7A7B1C062C72E44A00E59827 /* MainScreens */ = {
+			isa = PBXGroup;
+			children = (
+				7A3F07952C6CE96C00070204 /* FlightDetailView.swift */,
+				7A5E35562C72964000C93CA9 /* Profile */,
+				7A5E35552C72963000C93CA9 /* Favorites */,
+				7A5E35542C72962600C93CA9 /* Home */,
+			);
+			path = MainScreens;
 			sourceTree = "<group>";
 		};
 		7ACB148F2C70148A00B05F0D /* Resources */ = {
@@ -278,6 +291,7 @@
 				7A3F07A42C6CEB0000070204 /* FlightsListViewModel.swift in Sources */,
 				7ACB14A02C7016E400B05F0D /* UIModuleExamplesView.swift in Sources */,
 				62A76FD32C707C2300035738 /* SaveFlightsService.swift in Sources */,
+				7A7B1C092C72E54D00E59827 /* WelcomeView.swift in Sources */,
 				7A3F07A62C6CEB1A00070204 /* String+.swift in Sources */,
 				7ACB148E2C7013E800B05F0D /* ContentView.swift in Sources */,
 				7A3F07982C6CE9EC00070204 /* FlightsModel.swift in Sources */,
