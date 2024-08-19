@@ -20,7 +20,12 @@ struct HomeView: View {
             
             AirplaneSketchBackgroundView()
                 .dropIn()
-            FlightsListView(viewModel: viewModel)
+            
+            VStack {
+                SearchTextField(text: .constant(""))
+                
+                FlightsListView(viewModel: viewModel)
+            }
         }
     }
 }

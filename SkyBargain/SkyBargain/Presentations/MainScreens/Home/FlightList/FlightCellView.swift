@@ -4,8 +4,10 @@
 //
 
 import SwiftUI
+import UI
 
 struct FlightCellView: View {
+    @State private var isLiked: Bool = false
     
     @State private var flight: Flight
     @ObservedObject private var saveFlightsService: SaveFlightsService
@@ -38,12 +40,10 @@ struct FlightCellView: View {
             
             Spacer()
             
-            Button {
+            
+            
+            LikeButton(isLiked: $isLiked) {
                 like()
-            } label: {
-                Image(systemName: saveFlightsService.isIDSaved(flight.imageWebpUrl ?? "") ? "heart.fill" : "heart")
-                    .font(.title)
-                    .foregroundStyle(Color.purple)
             }
         }
     }
