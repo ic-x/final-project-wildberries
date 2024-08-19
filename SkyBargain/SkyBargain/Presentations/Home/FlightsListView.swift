@@ -4,6 +4,7 @@
 //
 
 import SwiftUI
+import UI
 
 struct FlightsListView: View {
     
@@ -44,7 +45,7 @@ struct FlightsListView: View {
                         .frame(maxWidth: .infinity, maxHeight: .infinity)
                         .ignoresSafeArea(.all)
                         .foregroundColor(Color.white.opacity(0.8))
-                    ProgressView()
+                    CustomProgressView()
                 }
                 .opacity(viewModel.isLoading ? 1.0 : 0)
             }
