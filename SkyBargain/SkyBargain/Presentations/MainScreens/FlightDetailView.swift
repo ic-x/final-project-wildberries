@@ -8,6 +8,10 @@ import UI
 
 struct FlightDetailView: View {
     
+    private var like: () -> Void
+    @State private var flight: Flight
+    @ObservedObject private var saveFlightsService: SaveFlightsService
+    
     init(flight: Flight, saveFlightsService: SaveFlightsService, like: @escaping () -> Void) {
         self.flight = flight
         self.like = like
@@ -58,8 +62,4 @@ struct FlightDetailView: View {
             .padding(16)
         }
     }
-    
-    private var like: () -> Void
-    @State private var flight: Flight
-    @ObservedObject private var saveFlightsService: SaveFlightsService
 }

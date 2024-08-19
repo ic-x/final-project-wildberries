@@ -8,11 +8,12 @@ import UI
 
 struct FlightsListView: View {
     
+    @ObservedObject private var viewModel: FlightsListViewModel
+    
     init(viewModel: FlightsListViewModel) {
         self.viewModel = viewModel
     }
     
-   
     var body: some View {
         NavigationStack {
             ZStack {
@@ -41,10 +42,10 @@ struct FlightsListView: View {
                 
                 //Loading view
                 Group {
-//                    Rectangle()
-//                        .frame(maxWidth: .infinity, maxHeight: .infinity)
-//                        .ignoresSafeArea(.all)
-//                        .foregroundColor(Color.white.opacity(0.8))
+                    //                    Rectangle()
+                    //                        .frame(maxWidth: .infinity, maxHeight: .infinity)
+                    //                        .ignoresSafeArea(.all)
+                    //                        .foregroundColor(Color.white.opacity(0.8))
                     
                     CustomProgressView()
                 }
@@ -53,6 +54,4 @@ struct FlightsListView: View {
         }
         
     }
-    
-    @ObservedObject private var viewModel: FlightsListViewModel
 }

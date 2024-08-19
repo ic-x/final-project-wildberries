@@ -7,8 +7,8 @@ import SwiftUI
 import UI
 
 struct FlightCellView: View {
-    @State private var isLiked: Bool = false
     
+    @State private var isLiked: Bool = false
     @State private var flight: Flight
     @ObservedObject private var saveFlightsService: SaveFlightsService
     private var like: () -> Void
