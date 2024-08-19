@@ -4,13 +4,27 @@
 //
 
 import SwiftUI
+import UI
 
 struct HomeView: View {
+    @ObservedObject private var viewModel: FlightsListViewModel
+    
+    init(viewModel: FlightsListViewModel) {
+        self.viewModel = viewModel
+    }
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        ZStack {
+            Color.brandBackground
+                .ignoresSafeArea()
+            
+            AirplaneSketchBackgroundView()
+                .dropIn()
+            FlightsListView(viewModel: viewModel)
+        }
     }
 }
 
-#Preview {
-    HomeView()
-}
+//#Preview {
+//    HomeView()
+//}

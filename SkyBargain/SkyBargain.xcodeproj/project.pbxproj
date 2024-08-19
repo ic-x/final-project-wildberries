@@ -118,12 +118,20 @@
 			path = Favorties;
 			sourceTree = "<group>";
 		};
-		7A5E35542C72962600C93CA9 /* Home */ = {
+		7A2954CB2C72FB0B006A8083 /* FlightList */ = {
 			isa = PBXGroup;
 			children = (
 				7A3F079D2C6CEA9800070204 /* FlightCellView.swift */,
 				7A3F079B2C6CEA5200070204 /* FlightsListView.swift */,
 				7A3F07A32C6CEB0000070204 /* FlightsListViewModel.swift */,
+			);
+			path = FlightList;
+			sourceTree = "<group>";
+		};
+		7A5E35542C72962600C93CA9 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				7A2954CB2C72FB0B006A8083 /* FlightList */,
 				7A2954C32C72F935006A8083 /* HomeView.swift */,
 			);
 			path = Home;
