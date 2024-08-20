@@ -25,26 +25,23 @@ struct FlightDetailsView: View {
             Color.brandBackground
                 .ignoresSafeArea()
             
-            ScrollView {
-                VStack(spacing: 32) {
-                    
-                    FlightMapView()
-                        .clipShape(Circle())
-                        .frame(width: 350, height: 350)
-                        .shadow(color: .brandAccentColor.opacity(0.5), radius: 20)
-                    
-                    
-                    flightDetails
-                        .padding(.horizontal)
-                    
-                    PrimaryButton(action: {
-                        isSeatMapPresented.toggle()
-                    }) {
-                        Text("Показать схему сидений")
-                    }
-                    .shadow(color: .brandAccentColor.opacity(0.7), radius: 5)
+            VStack() {
+                FlightMapView()
+                    .clipShape(Circle())
+                    .frame(width: 350, height: 350)
+                    .shadow(color: .brandAccentColor.opacity(0.5), radius: 20)
+                
+                
+                flightDetails
+                    .padding(16)
+                    .padding(.horizontal, 20)
+                
+                PrimaryButton(action: {
+                    isSeatMapPresented.toggle()
+                }) {
+                    Text("Показать схему сидений")
                 }
-                .padding(16)
+                .shadow(color: .brandAccentColor.opacity(0.7), radius: 5)
             }
             .onAppear {
                 isLiked = saveFlightsService.isIDSaved(flight.imageWebpUrl ?? "")
@@ -66,8 +63,7 @@ struct FlightDetailsView: View {
                 Button(action: {
                     dismiss()
                 }) {
-                    Image(systemName: "chevron.left")
-                        .foregroundColor(.brandAccentColor)
+                    Image(toolbar: .chevronLeft)
                 }
             }
             

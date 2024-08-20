@@ -19,10 +19,9 @@ struct ProfileView: View {
                     .multilineTextAlignment(.center)
                 
                 VStack(spacing: 8) {
-                    Image(systemName: "person.circle.fill")
+                    Image(image: .changeAvatar)
                         .resizable()
                         .frame(width: 175, height: 175)
-                        .foregroundColor(.brandPlaceholder)
                         .padding(.bottom)
                     
                     Text("John Smith")
