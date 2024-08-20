@@ -7,12 +7,17 @@ import SwiftUI
 import UI
 
 struct HomeView: View {
+    
+    @State private var searchedFlight: String = ""
     @EnvironmentObject var flightsFindService: FlightsFindService
     @EnvironmentObject var saveFlightsService: SaveFlightsService
     
     var body: some View {
+        
         NavigationStack {
+            
             ZStack {
+                
                 Color.brandBackground
                     .ignoresSafeArea()
                 
@@ -20,17 +25,16 @@ struct HomeView: View {
                     .dropIn()
                 
                 VStack {
-                    SearchTextField(text: .constant(""))
+                    SearchTextField(text: $searchedFlight)
                         .padding(.horizontal)
                     
-                    FlightsListView()
+                    FlightsListView(searchByCity: $searchedFlight)
                 }
                 .padding([.horizontal, .top])
             }
         }
     }
 }
-
 //#Preview {
 //    HomeView()
 //}

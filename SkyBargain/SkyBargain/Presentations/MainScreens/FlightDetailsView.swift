@@ -15,7 +15,7 @@ struct FlightDetailsView: View {
     @EnvironmentObject private var saveFlightsService: SaveFlightsService
     
     init(flight: Flight, like: @escaping () -> Void) {
-        self.flight = flight
+        self._flight = State(initialValue: flight)
         self.like = like
         _isLiked = State(initialValue: false)
     }
