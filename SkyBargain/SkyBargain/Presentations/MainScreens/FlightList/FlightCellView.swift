@@ -7,20 +7,18 @@ import SwiftUI
 import UI
 
 struct FlightCellView: View {
-    
     @State private var isLiked: Bool = false
     @State private var flight: Flight
-    @ObservedObject private var saveFlightsService: SaveFlightsService
+    @EnvironmentObject private var saveFlightsService: SaveFlightsService
     private var like: () -> Void
     
-    init(flight: Flight, saveFlightsService: SaveFlightsService, like: @escaping () -> Void) {
+    init(flight: Flight, like: @escaping () -> Void) {
         self.flight = flight
         self.like = like
-        self.saveFlightsService = saveFlightsService
+        _isLiked = State(initialValue: false)
     }
     
     var body: some View {
-        
         HStack {
             VStack(alignment: .leading, spacing: 16) {
                 Text("Город отправления: ")
@@ -40,11 +38,13 @@ struct FlightCellView: View {
             
             Spacer()
             
-            
-            
             LikeButton(isLiked: $isLiked) {
                 like()
             }
+            .padding(.trailing, 20)
+        }
+        .onAppear {
+            isLiked = saveFlightsService.isIDSaved(flight.imageWebpUrl ?? "")
         }
     }
 }

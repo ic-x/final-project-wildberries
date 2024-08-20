@@ -2,8 +2,6 @@
 //  SaveFlightsService.swift
 //  SkyBargain
 //
-//  Created by ARMBP on 8/17/24.
-//
 
 import Foundation
 
@@ -18,18 +16,15 @@ final class SaveFlightsService: ObservableObject {
     }
     
     func trySaveID(_ id: String) {
-        guard isIDSaved(id) else {
-            if !savedIDs.contains(id) {
-                savedIDs.append(id)
-                userDefaults.set(savedIDs, forKey: key)
-            }
-            return
+        if isIDSaved(id) {
+            deleteByID(id)
+        } else {
+            savedIDs.append(id)
+            userDefaults.set(savedIDs, forKey: key)
         }
-        deleteByID(id)
     }
     
     func isIDSaved(_ id: String) -> Bool {
-        let savedIDs = userDefaults.stringArray(forKey: key) ?? []
         return savedIDs.contains(id)
     }
     

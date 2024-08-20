@@ -4,10 +4,57 @@
 //
 
 import SwiftUI
+import UI
 
 struct ProfileView: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        ZStack {
+            Color.brandBackground
+                .ignoresSafeArea()
+            
+            VStack(spacing: 20) {
+                Text("Профиль")
+                    .font(.subheading1)
+                    .lineSpacing(28)
+                    .multilineTextAlignment(.center)
+                
+                VStack(spacing: 8) {
+                    Image(systemName: "person.circle.fill")
+                        .resizable()
+                        .frame(width: 175, height: 175)
+                        .foregroundColor(.brandPlaceholder)
+                        .padding(.bottom)
+                    
+                    Text("John Smith")
+                        .font(.heading2)
+                }
+                .padding(.top, 20)
+                
+                Spacer()
+                
+                VStack(spacing: 20) {
+                    PrimaryButton(action: {
+                    }) {
+                        Text("Редактировать профиль")
+                    }
+                    
+                    PrimaryButton(action: {
+                    }) {
+                        Text("Настройки")
+                    }
+                    
+                    TextButton(action: {
+                    }) {
+                        Text("Выйти")
+                            .foregroundColor(.red)
+                    }
+                }
+                .padding(.horizontal, 20)
+                
+                Spacer()
+            }
+            .padding(.top, 40)
+        }
     }
 }
 

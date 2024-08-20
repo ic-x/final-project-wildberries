@@ -7,24 +7,25 @@ import SwiftUI
 import UI
 
 struct HomeView: View {
-    @ObservedObject private var viewModel: FlightsListViewModel
-    
-    init(viewModel: FlightsListViewModel) {
-        self.viewModel = viewModel
-    }
+    @EnvironmentObject var flightsFindService: FlightsFindService
+    @EnvironmentObject var saveFlightsService: SaveFlightsService
     
     var body: some View {
-        ZStack {
-            Color.brandBackground
-                .ignoresSafeArea()
-            
-            AirplaneSketchBackgroundView()
-                .dropIn()
-            
-            VStack {
-                SearchTextField(text: .constant(""))
+        NavigationStack {
+            ZStack {
+                Color.brandBackground
+                    .ignoresSafeArea()
                 
-                FlightsListView(viewModel: viewModel)
+                AirplaneSketchBackgroundView()
+                    .dropIn()
+                
+                VStack {
+                    SearchTextField(text: .constant(""))
+                        .padding(.horizontal)
+                    
+                    FlightsListView()
+                }
+                .padding([.horizontal, .top])
             }
         }
     }
