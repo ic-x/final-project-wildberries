@@ -8,11 +8,8 @@ import UI
 
 struct MainView: View {
     @State private var selectedTab: Int = 0
-    @ObservedObject private var viewModel: FlightsListViewModel
-    
-    init(viewModel: FlightsListViewModel) {
-        self.viewModel = viewModel
-    }
+    @EnvironmentObject var flightsFindService: FlightsFindService
+    @EnvironmentObject var saveFlightsService: SaveFlightsService
     
     var body: some View {
         ZStack {
@@ -25,7 +22,7 @@ struct MainView: View {
                     CustomTabItem(
                         icon: Image(systemName: "list.bullet.circle"),
                         activeIcon: Image(systemName: "list.bullet.circle.fill"),
-                        view: AnyView(HomeView(viewModel: viewModel))
+                        view: AnyView(HomeView())
                     ),
                     CustomTabItem(
                         icon: Image(systemName: "star.circle"),

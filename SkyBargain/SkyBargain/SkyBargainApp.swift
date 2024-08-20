@@ -17,7 +17,9 @@ struct SkyBargainApp: App {
     
     var body: some Scene {
         WindowGroup {
-            ContentView(flightsFindService: flightsFindService, saveFlightsService: saveFlightsService)
+            ContentView()
+                .environmentObject(flightsFindService)
+                .environmentObject(saveFlightsService)
         }
     }
 }
