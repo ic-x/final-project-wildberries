@@ -7,17 +7,19 @@ import SwiftUI
 import UI
 
 struct FlightsListView: View {
+    
     @StateObject private var viewModel = FlightsListViewModel(flightsFindService: nil, saveFlightsService: nil)
-
     @EnvironmentObject var flightsFindService: FlightsFindService
     @EnvironmentObject var saveFlightsService: SaveFlightsService
+    @Binding var searchByCity: String
     
     var body: some View {
         ZStack {
             ScrollView(showsIndicators: false) {
                 if let flights = viewModel.cheapFlights?.flights {
                     LazyVStack(alignment: .leading, spacing: 16) {
-                        ForEach(flights, id: \.imageWebpUrl) { flight in
+                        ForEach(flights.filter({ !searchByCity.isEmpty ? $0.endCity!.lowercased().contains(searchByCity.lowercased()) || $0.startCity!.lowercased().contains(searchByCity.lowercased()) : true
+                        }), id: \.imageWebpUrl) { flight in
                             NavigationLink(
                                 destination: FlightDetailsView(
                                     flight: flight,

@@ -13,49 +13,53 @@ struct UIModuleExamplesView: View {
     
     var body: some View {
         ScrollView{
-            Text("Hello, World!")
-                .font(.heading1)
-                .fadeIn()
             
-            
-            VStack {
-                Text("brandBackground")
-                    .foregroundStyle(Color.brandBackground)
-                Text("safe")
-                    .foregroundStyle(Color.safe)
+            Group {
+                
+                Text("Hello, World!")
+                    .font(.heading1)
+                    .fadeIn()
+                
+                
+                VStack {
+                    Text("brandBackground")
+                        .foregroundStyle(Color.brandBackground)
+                    Text("safe")
+                        .foregroundStyle(Color.safe)
+                }
+                
+                
+                PrimaryButton(action: {
+                    print("Button was clicked!")
+                }) {
+                    Text("Click Me")
+                }
+                .disabled(isDisabled)
+                
+                
+                TextButton(action: {
+                    print("Button was clicked!!!")
+                }) {
+                    Text("Click Me Please")
+                }
+                .padding()
+                
+                
+                TextButton(action: {
+                    print("Button was clicked!!!")
+                }) {
+                    Text("Click Me Please")
+                }
+                .disabled(isDisabled)
+                .padding()
+                
+                
+                Text("Custom Font Example")
+                    .font(.body2)
+                Text("Custom Font Example")
+                    .font(.body1)
+                
             }
-            
-            
-            PrimaryButton(action: {
-                print("Button was clicked!")
-            }) {
-                Text("Click Me")
-            }
-            .disabled(isDisabled)
-            
-            
-            TextButton(action: {
-                print("Button was clicked!!!")
-            }) {
-                Text("Click Me Please")
-            }
-            .padding()
-            
-            
-            TextButton(action: {
-                print("Button was clicked!!!")
-            }) {
-                Text("Click Me Please")
-            }
-            .disabled(isDisabled)
-            .padding()
-            
-            
-            Text("Custom Font Example")
-                .font(.body2)
-            Text("Custom Font Example")
-                .font(.body1)
-            
             
             VStack(spacing: 20) {
                 Text("Hello, World!")
