@@ -12,26 +12,25 @@ struct ProfileView: View {
             Color.brandBackground
                 .ignoresSafeArea()
             
-            VStack(spacing: 20) {
+            VStack() {
                 Text("Профиль")
-                    .font(.subheading1)
-                    .lineSpacing(28)
-                    .multilineTextAlignment(.center)
+                    .font(.boldSubheading1)
+                    .padding(.bottom, 22)
                 
                 VStack(spacing: 8) {
                     Image(image: .changeAvatar)
                         .resizable()
                         .frame(width: 175, height: 175)
-                        .padding(.bottom)
+                        .padding(.bottom, 30)
                     
-                    Text("John Smith")
+                    Text("Иван Иванов")
                         .font(.heading2)
                 }
-                .padding(.top, 20)
+                .padding(.vertical, 35)
                 
                 Spacer()
                 
-                VStack(spacing: 20) {
+                VStack(spacing: 25) {
                     PrimaryButton(action: {
                     }) {
                         Text("Редактировать профиль")
@@ -52,7 +51,7 @@ struct ProfileView: View {
                 
                 Spacer()
             }
-            .padding(.top, 40)
+            .padding([.horizontal, .top])
         }
     }
 }

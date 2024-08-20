@@ -16,7 +16,6 @@ struct FlightsListView: View {
     var body: some View {
         ZStack {
             ScrollView(showsIndicators: false) {
-                // Добавляем кастомный Pull-to-Refresh
                 EmptyRefreshControl(coordinateSpaceName: "pullToRefresh", onRefresh: {
                     viewModel.refresh()
                 })
@@ -47,7 +46,7 @@ struct FlightsListView: View {
                     }
                 }
             }
-            .coordinateSpace(name: "pullToRefresh") // Указываем имя координатного пространства
+            .coordinateSpace(name: "pullToRefresh")
             .padding(16)
             
             Group {

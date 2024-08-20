@@ -7,17 +7,13 @@ import SwiftUI
 import UI
 
 struct HomeView: View {
-    
     @State private var searchedFlight: String = ""
     @EnvironmentObject var flightsFindService: FlightsFindService
     @EnvironmentObject var saveFlightsService: SaveFlightsService
     
     var body: some View {
-        
         NavigationStack {
-            
             ZStack {
-                
                 Color.brandBackground
                     .ignoresSafeArea()
                 
@@ -35,6 +31,3 @@ struct HomeView: View {
         }
     }
 }
-//#Preview {
-//    HomeView()
-//}

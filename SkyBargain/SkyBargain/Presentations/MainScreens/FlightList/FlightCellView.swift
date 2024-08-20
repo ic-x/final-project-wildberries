@@ -27,6 +27,8 @@ struct FlightCellView: View {
                 Text("Дата возвращения: ")
                 Text("Цена в рублях: ")
             }
+            .font(.subheading2)
+            .foregroundColor(.text)
             
             VStack(alignment: .leading, spacing: 16) {
                 Text(flight.startCity ?? "-")
@@ -35,6 +37,8 @@ struct FlightCellView: View {
                 Text(flight.endDate?.dateFromStringConverter ?? "-")
                 Text(String(flight.price ?? 0) + "₽")
             }
+            .font(.subheading2)
+            .foregroundColor(.text)
             
             Spacer()
             

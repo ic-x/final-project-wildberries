@@ -2,31 +2,34 @@
   "sourceLanguage" : "ru-RU",
   "strings" : {
     "brandBackground" : {
-
-    },
-    "Click Me" : {
-
-    },
-    "Click Me Please" : {
-
-    },
-    "Custom Font Example" : {
-
-    },
-    "Hello, World!" : {
-
-    },
-    "John Smith" : {
-
-    },
-    "Name:" : {
-
+      "localizations" : {
+        "en-US" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "brandBackground"
+          }
+        }
+      }
     },
     "safe" : {
-
+      "localizations" : {
+        "en-US" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "safe"
+          }
+        }
+      }
     },
     "Выйти" : {
-
+      "localizations" : {
+        "en-US" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Log Out"
+          }
+        }
+      }
     },
     "Город отправления: " : {
       "localizations" : {
@@ -68,26 +71,135 @@
         }
       }
     },
+    "Иван Иванов" : {
+      "localizations" : {
+        "en-US" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "John Smith"
+          }
+        }
+      }
+    },
     "Избранное" : {
-
+      "localizations" : {
+        "en-US" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Favorites"
+          }
+        }
+      }
+    },
+    "Имя:" : {
+      "localizations" : {
+        "en-US" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Name:"
+          }
+        }
+      }
+    },
+    "Нажми на меня" : {
+      "localizations" : {
+        "en-US" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Click Me"
+          }
+        }
+      }
+    },
+    "Нажми на меня, пожалуйста" : {
+      "localizations" : {
+        "en-US" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Please Click Me"
+          }
+        }
+      }
     },
     "Настройки" : {
-
+      "localizations" : {
+        "en-US" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Settings"
+          }
+        }
+      }
     },
     "Начать" : {
-
+      "localizations" : {
+        "en-US" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Start"
+          }
+        }
+      }
     },
     "Нет сохраненных полетов" : {
-
+      "localizations" : {
+        "en-US" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "No saved flights"
+          }
+        }
+      }
     },
     "Показать схему сидений" : {
-
+      "localizations" : {
+        "en-US" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Show Seat Map"
+          }
+        }
+      }
+    },
+    "Привет мир!" : {
+      "localizations" : {
+        "en-US" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hello World!"
+          }
+        }
+      }
+    },
+    "Пример пользовательского шрифта" : {
+      "localizations" : {
+        "en-US" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Example of a Custom Font"
+          }
+        }
+      }
     },
     "Профиль" : {
-
+      "localizations" : {
+        "en-US" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Profile"
+          }
+        }
+      }
     },
     "Редактировать профиль" : {
-
+      "localizations" : {
+        "en-US" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Edit Profile"
+          }
+        }
+      }
     },
     "Цена в рублях: " : {
       "localizations" : {
@@ -100,7 +212,14 @@
       }
     },
     "Это Sky Bargain" : {
-
+      "localizations" : {
+        "en-US" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "This is Sky Bargain"
+          }
+        }
+      }
     }
   },
   "version" : "1.0"

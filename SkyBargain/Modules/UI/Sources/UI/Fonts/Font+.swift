@@ -11,6 +11,7 @@ extension Font {
     
     // Subheading fonts
     public static let subheading1 = Font.custom("SFProDisplay-SemiBold", size: 18)
+    public static let boldSubheading1 = Font.custom("SFProDisplay-Bold", size: 18)
     public static let subheading2 = Font.custom("SFProDisplay-SemiBold", size: 16)
     
     // Body text fonts

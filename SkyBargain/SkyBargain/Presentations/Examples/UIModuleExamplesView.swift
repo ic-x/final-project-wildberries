@@ -16,7 +16,7 @@ struct UIModuleExamplesView: View {
             
             Group {
                 
-                Text("Hello, World!")
+                Text("Привет мир!")
                     .font(.heading1)
                     .fadeIn()
                 
@@ -30,59 +30,59 @@ struct UIModuleExamplesView: View {
                 
                 
                 PrimaryButton(action: {
-                    print("Button was clicked!")
+                    print("Кнопка нажата!")
                 }) {
-                    Text("Click Me")
+                    Text("Нажми на меня")
                 }
                 .disabled(isDisabled)
                 
                 
                 TextButton(action: {
-                    print("Button was clicked!!!")
+                    print("Кнопка была нажата!!!")
                 }) {
-                    Text("Click Me Please")
+                    Text("Нажми на меня, пожалуйста")
                 }
                 .padding()
                 
                 
                 TextButton(action: {
-                    print("Button was clicked!!!")
+                    print("Кнопка была нажата!!!")
                 }) {
-                    Text("Click Me Please")
+                    Text("Нажми на меня, пожалуйста")
                 }
                 .disabled(isDisabled)
                 .padding()
                 
                 
-                Text("Custom Font Example")
+                Text("Пример пользовательского шрифта")
                     .font(.body2)
-                Text("Custom Font Example")
+                Text("Пример пользовательского шрифта")
                     .font(.body1)
                 
             }
             
             VStack(spacing: 20) {
-                Text("Hello, World!")
+                Text("Привет мир!")
                     .font(.largeTitle)
                 
                 PrimaryButton(action: {
-                    print("Button Clicked")
+                    print("Кнопка нажата")
                 }) {
-                    Text("Click Me")
+                    Text("Нажми на меня")
                 }
             }
             .slideAndScale(offset: 100)
             .padding()
             
             
-            CustomTextField(text: .constant(""), placeholder: "some text...") {}
+            CustomTextField(text: .constant(""), placeholder: "какой-то текст...") {}
                 .textInputAutocapitalization(.never)
                 .disableAutocorrection(true)
                 .padding()
             
             
-            CustomTextField(text: .constant(""), placeholder: "Enter your name") {
-                Text("Name:")
+            CustomTextField(text: .constant(""), placeholder: "Введите ваше имя") {
+                Text("Имя:")
                     .font(.body1)
             }
             .padding()
@@ -92,7 +92,7 @@ struct UIModuleExamplesView: View {
                 .padding()
             
             LikeButton(isLiked: $isLiked) {
-                print("Liked status changed to: \(isLiked)")
+                print("Статус лайка изменился на: \(isLiked)")
             }
             .padding()
         }

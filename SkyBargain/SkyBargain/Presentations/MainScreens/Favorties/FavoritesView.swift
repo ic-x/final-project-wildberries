@@ -21,13 +21,9 @@ struct FavoritesView: View {
                     .dropIn()
                 
                 VStack {
-                    ZStack {
-                        SearchTextField(text: .constant("")).opacity(0)
-                            .padding(.horizontal)
-                        
-                        Text("Избранное")
-                            .font(.subheading1)
-                    }
+                    Text("Избранное")
+                        .font(.boldSubheading1)
+                        .padding(.bottom, 22)
                     
                     ScrollView(showsIndicators: false) {
                         if viewModel.favoriteFlights.isEmpty {
@@ -63,7 +59,6 @@ struct FavoritesView: View {
                         }
                     }
                     .padding(16)
-                    .offset(x: 0, y: 1.25)
                 }
                 .padding([.horizontal, .top])
             }
@@ -73,7 +68,3 @@ struct FavoritesView: View {
         }
     }
 }
-
-//#Preview {
-//    FavoritesView()
-//}
