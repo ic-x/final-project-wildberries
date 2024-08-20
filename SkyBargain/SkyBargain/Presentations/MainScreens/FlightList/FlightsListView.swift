@@ -16,6 +16,11 @@ struct FlightsListView: View {
     var body: some View {
         ZStack {
             ScrollView(showsIndicators: false) {
+                // Добавляем кастомный Pull-to-Refresh
+                EmptyRefreshControl(coordinateSpaceName: "pullToRefresh", onRefresh: {
+                    viewModel.refresh()
+                })
+                
                 if let flights = viewModel.cheapFlights?.flights {
                     LazyVStack(alignment: .leading, spacing: 16) {
                         ForEach(flights.filter({ !searchByCity.isEmpty ? $0.endCity!.lowercased().contains(searchByCity.lowercased()) || $0.startCity!.lowercased().contains(searchByCity.lowercased()) : true
@@ -42,10 +47,8 @@ struct FlightsListView: View {
                     }
                 }
             }
+            .coordinateSpace(name: "pullToRefresh") // Указываем имя координатного пространства
             .padding(16)
-            .refreshable {
-                viewModel.refresh()
-            }
             
             Group {
                 CustomProgressView()
@@ -57,4 +60,3 @@ struct FlightsListView: View {
         }
     }
 }
-
