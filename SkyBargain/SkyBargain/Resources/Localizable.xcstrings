@@ -1,0 +1,107 @@
+{
+  "sourceLanguage" : "ru-RU",
+  "strings" : {
+    "brandBackground" : {
+
+    },
+    "Click Me" : {
+
+    },
+    "Click Me Please" : {
+
+    },
+    "Custom Font Example" : {
+
+    },
+    "Hello, World!" : {
+
+    },
+    "John Smith" : {
+
+    },
+    "Name:" : {
+
+    },
+    "safe" : {
+
+    },
+    "Выйти" : {
+
+    },
+    "Город отправления: " : {
+      "localizations" : {
+        "en-US" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Departure City:"
+          }
+        }
+      }
+    },
+    "Город прибытия: " : {
+      "localizations" : {
+        "en-US" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Arrival City:"
+          }
+        }
+      }
+    },
+    "Дата возвращения: " : {
+      "localizations" : {
+        "en-US" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Return Date:"
+          }
+        }
+      }
+    },
+    "Дата отправления: " : {
+      "localizations" : {
+        "en-US" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Departure Date:"
+          }
+        }
+      }
+    },
+    "Избранное" : {
+
+    },
+    "Настройки" : {
+
+    },
+    "Начать" : {
+
+    },
+    "Нет сохраненных полетов" : {
+
+    },
+    "Показать схему сидений" : {
+
+    },
+    "Профиль" : {
+
+    },
+    "Редактировать профиль" : {
+
+    },
+    "Цена в рублях: " : {
+      "localizations" : {
+        "en-US" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Price in Rubles:"
+          }
+        }
+      }
+    },
+    "Это Sky Bargain" : {
+
+    }
+  },
+  "version" : "1.0"
+}

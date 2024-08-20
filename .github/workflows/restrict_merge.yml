@@ -1,0 +1,3 @@
+name:RestrictPRtomainon:pull_request:branches:-mainjobs:restrict_merge:runs-on:ubuntu-lateststeps:-name:Checksourcebranchif:github.head_ref!='develop'run:|
+        echo "PRs to main must come from develop branch."
+        exit 1
